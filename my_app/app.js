@@ -58,7 +58,8 @@ app.post("/submitInformation/", (req, res, next) => {
       client
         .query(query)
         .then(() => {
-          res.render('information.ejs');
+          // res.render('information.ejs');
+          res.send("Data Added.")
         })
         .catch(e => {
           console.error(e.stack);
@@ -73,3 +74,4 @@ app.post("/submitInformation/", (req, res, next) => {
 app.get('/information', (req,res) =>{
     res.render('information.ejs')
 });
+
