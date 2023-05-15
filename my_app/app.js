@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3300;
+
+//テンプレートエンジンの設定
 app.set('view engine', 'ejs');
 const pg = require("pg");
 
@@ -44,11 +46,11 @@ app.post("/submitInformation/", (req, res, next) => {
 
 
   // 新規情報をDBに追加
-  　  var query = {
-    text:
-      "INSERT INTO information (country, restaurantName, location, mealName, comment) VALUES($1, $2, $3, $4, $5)",
-    values: [req.body.country, req.body.restaurantName, req.body.location, req.body.mealName, req.body.comment]　
-  };
+    var query = {
+      text:
+        "INSERT INTO information (country, restrauntName, location, mealName, comment) VALUES($1, $2, $3, $4, $5)",
+      values: [req.body.country, req.body.restaurantName, req.body.location, req.body.mealName, req.body.comment]　
+    };
 
   pool.connect((err, client) => {
     if (err) {
@@ -59,7 +61,7 @@ app.post("/submitInformation/", (req, res, next) => {
         .query(query)
         .then(() => {
           // res.render('information.ejs');
-          res.send("Data Added.")
+          res.render('information.ejs');
         })
         .catch(e => {
           console.error(e.stack);
@@ -72,6 +74,6 @@ app.post("/submitInformation/", (req, res, next) => {
 
 //登録した情報の一覧画面のルーティング
 app.get('/information', (req,res) =>{
-    res.render('information.ejs')
+    res.render('information.ejs');
 });
 
