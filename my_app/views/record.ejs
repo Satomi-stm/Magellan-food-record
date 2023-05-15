@@ -26,7 +26,7 @@
             <!-- 情報記入部分 -->
             <form action="/submitInformation/" method="post" class="record-information">
                 <div class="form-group">
-                  <label for="nameInput">国名</label>
+                  <label for="nameInput" class="label-name">国名</label>
                   <!-- Country names and Country Code -->
                     <select class="form-select" id="country" name="country">
                     <option value="">country</option>
@@ -287,27 +287,27 @@
                 </div>
                 
                 <div class="form-group">
-                  <label for="commentInput">店名</label>
+                  <label for="commentInput" class="label-name">店名</label>
                   <textarea type="text" name="restaurantName" id="commentInput" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">
-                  <label for="commentInput">場所</label>
+                  <label for="commentInput" class="label-name">場所</label>
                   <input type="text" name="location" id="commentInput" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label for="commentInput">食べた料理</label>
+                  <label for="commentInput" class="label-name">食べた料理</label>
                   <input type="text" name="mealName" id="commentInput" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label for="commentInput">感想</label>
+                  <label for="commentInput" class="label-name">感想</label>
                   <textarea type="text" name="comment" id="commentInput" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">
-                  <label for="commentInput">写真</label>
+                  <label for="commentInput" class="label-name">写真</label>
                   <input type="file" name="picture" id="commentInput" class="form-control" onchange="previewFile(this);">
                 </div>
 
