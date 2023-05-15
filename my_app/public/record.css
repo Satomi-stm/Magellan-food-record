@@ -31,3 +31,12 @@ body{
   padding:0px;
   text-align:center;
 }
+
+.record-information{
+  background-color: blanchedalmond;
+  padding-top:20px;
+}
+
+.labe-name{
+  font-size:20px;
+}
